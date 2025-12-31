@@ -1,38 +1,35 @@
 import CTA from '@/components/CTA';
-import { Triangle } from '@/components/geometric-objects/Triangle';
-import { Sphere } from '@/components/geometric-objects/Sphere';
-import { Torus } from '@/components/geometric-objects/Torus';
-import Hero from '@/components/Hero';
-import { HeroSection } from '@/components/hero-section/HeroSection';
 import Portfolio from '@/components/Portfolio';
 import Pricing from '@/components/Pricing';
-import WhyChooseMe from '@/components/WhyChooseMe';
 import { Section } from '@/layouts/Section';
 import { BlurOverlay } from '@/components/common/BlurOverlay';
+import WhyChooseMe from '@/components/WhyChooseMe';
+import AboutMe from '@/components/AboutMe';
+import { Shape } from '@/components/common/Shape';
 
 export default function Home() {
   return (
     <>
       <BlurOverlay />
 
-      <HeroSection />
+      {/* <HeroSection /> */}
 
       <Section
         backgroundObjects={
           <>
-            <Sphere className='top-1/12 left-1/12 size-90' />
-            <Sphere className='right-1/12 bottom-3/12 size-75' colorA='#FAB34E' colorB='#FAB34E' />
+            <Shape className='top-1/12 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 size-75 opacity-40' />
           </>
         }
       >
-        <Hero />
+        <AboutMe />
       </Section>
 
       <Section
         backgroundObjects={
           <>
-            <Sphere className='top-0 left-1/12 size-90' />
-            <Triangle className='right-1/12 bottom-3/12' />
+            <Shape className='top-0 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >
@@ -42,8 +39,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <Triangle size={300} className='top-0 left-1/12' />
-            <Triangle size={300} className='right-1/12 bottom-3/12' />
+            <Shape className='top-0 left-1/12 -z-1 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >
@@ -53,8 +50,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <Sphere className='top-0 left-1/12 size-90' />
-            <Triangle className='right-1/12 bottom-3/12' />
+            <Shape className='top-0 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >
@@ -64,8 +61,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <Torus className='top-0 left-1/12 size-90' />
-            <Triangle className='right-1/12 bottom-3/12' />
+            <Shape className='top-0 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >
