@@ -1,12 +1,12 @@
 'use client';
 
+import { Button } from '@/components/common/Button';
+import { AppLink } from '@/components/Link';
 import { CloseIcon } from '@/icons/CloseIcon';
 import { MenuIcon } from '@/icons/MenuIcon';
 import { cn } from '@/utils/cn';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Button } from './Button';
-import { AppLink } from './Link';
 
 export function MobileSideBar() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -44,26 +44,22 @@ export function MobileSideBar() {
         </div>
         <ul className='mt-4 space-y-3'>
           <li>
-            <AppLink className='text-neutral-800' href='#home' onClick={handleToggleOpenSideBar}>
+            <AppLink href='#home' onClick={handleToggleOpenSideBar}>
               Home
             </AppLink>
           </li>
           <li>
-            <AppLink className='text-neutral-800' href='#about' onClick={handleToggleOpenSideBar}>
+            <AppLink href='#about' onClick={handleToggleOpenSideBar}>
               Portfolio
             </AppLink>
           </li>
           <li>
-            <AppLink
-              className='text-neutral-800'
-              href='#services'
-              onClick={handleToggleOpenSideBar}
-            >
+            <AppLink href='#services' onClick={handleToggleOpenSideBar}>
               Pricing
             </AppLink>
           </li>
           <li>
-            <AppLink className='text-neutral-800' href='#contact' onClick={handleToggleOpenSideBar}>
+            <AppLink href='#contact' onClick={handleToggleOpenSideBar}>
               Contact
             </AppLink>
           </li>
