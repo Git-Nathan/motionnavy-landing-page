@@ -1,6 +1,6 @@
+import { AppLink } from '@/components/common/AppLink';
 import { Logo } from '@/components/common/Logo';
 import { LightDarkToggle } from '@/components/header/LightDarkToggle';
-import { AppLink } from '@/components/Link';
 import { MobileSideBar } from './MobileSideBar';
 
 export function Header() {
@@ -15,10 +15,10 @@ export function Header() {
                 <AppLink href='#home'>Home</AppLink>
               </li>
               <li>
-                <AppLink href='#about'>About</AppLink>
+                <AppLink href='#about-me'>About Me</AppLink>
               </li>
               <li>
-                <AppLink href='#portfolio'>Portfolio</AppLink>
+                <AppLink href='#my-work'>My Work</AppLink>
               </li>
               <li>
                 <AppLink href='#contact'>Contact</AppLink>

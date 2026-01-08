@@ -2,9 +2,9 @@
 
 import { Section } from '@/layouts/Section';
 import { useRef } from 'react';
-import { AppLink } from './Link';
+import { AppLink } from './common/AppLink';
 
-const CTA = () => {
+export const CTA = () => {
   const sectionRef = useRef(null);
 
   return (
@@ -44,5 +44,3 @@ const CTA = () => {
     </Section>
   );
 };
-
-export default CTA;
