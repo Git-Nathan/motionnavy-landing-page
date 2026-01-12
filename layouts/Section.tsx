@@ -10,19 +10,20 @@ export function Section({
   children,
   backgroundObjects,
   wrapperProps,
+  className,
   ...restProps
-}: Readonly<ISectionProps>) {
+}: ISectionProps) {
   const { className: wrapperClassName, ...restWrapperProps } = wrapperProps || {};
 
   return (
     <section
-      className={cn('relative flex items-center justify-center overflow-x-clip')}
+      className={cn('relative flex items-center justify-center overflow-x-clip', className)}
       {...restProps}
     >
       {backgroundObjects}
       <div
         className={cn(
-          'relative flex w-full max-w-350 flex-col items-center justify-center px-[4%]',
+          'relative mx-[4%] flex w-full max-w-5xl flex-col items-center justify-center',
           wrapperClassName,
         )}
         {...restWrapperProps}

@@ -4,11 +4,11 @@ import { useThemeStore } from '@/stores/theme.store';
 import { cn } from '@/utils/cn';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: ReactNode;
   endIcon?: ReactNode;
-  variant?: 'solid' | 'text';
-}
+  variant?: 'solid' | 'text' | 'secondary';
+};
 
 export function Button({
   children,
@@ -18,11 +18,13 @@ export function Button({
   variant = 'solid',
   style,
   ...props
-}: Readonly<IButtonProps>) {
+}: IButtonProps) {
   const { mainColor } = useThemeStore();
 
   const baseClasses = {
     solid: 'text-white shadow-lg',
+    secondary:
+      'bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 dark:bg-gray-300 dark:text-black',
     text: '',
   };
 
@@ -36,7 +38,7 @@ export function Button({
   return (
     <button
       className={cn(
-        'flex cursor-pointer items-center gap-2 overflow-hidden rounded-full px-5 py-2 transition-all duration-200 ease-in-out hover:scale-105',
+        'relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-5 py-2 transition-all duration-200 ease-in-out hover:scale-105',
         baseClasses[variant],
         className,
       )}
