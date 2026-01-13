@@ -1,10 +1,10 @@
-import { AvatarLeftEye } from '@/icons/AvatarIcon/AvatarLeftEye';
+import { AvatarLeftEye } from '@/icons/avatar-icon/AvatarLeftEye';
 import useMightyMouse from 'react-hook-mighty-mouse';
 
 export function LeftEye() {
   const {
     selectedElement: { position },
-  } = useMightyMouse(true, 'left-eye', { x: 45, y: 45 });
+  } = useMightyMouse(true, 'face-center');
 
   return (
     <div
@@ -14,7 +14,6 @@ export function LeftEye() {
       }}
     >
       <AvatarLeftEye
-        id='left-eye'
         style={{
           rotate: `${-Number(position.angle) + 150}deg`,
         }}

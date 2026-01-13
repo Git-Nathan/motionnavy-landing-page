@@ -1,6 +1,6 @@
 'use client';
 
-import { AvatarBody } from '@/icons/AvatarIcon/AvatarBody';
+import { AvatarBody } from '@/icons/avatar-icon/AvatarBody';
 import { useThemeStore } from '@/stores/theme.store';
 import { LeftEye } from './LeftEye';
 import { RightEye } from './RightEye';
@@ -24,6 +24,7 @@ export function EyeFollowAvatar({ smile = false }: EyeFollowAvatarProps) {
           <AvatarBody smile={smile} />
           <LeftEye />
           <RightEye />
+          <div id='face-center' className='absolute top-28' />
         </div>
       </div>
     </div>

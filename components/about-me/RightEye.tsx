@@ -1,10 +1,10 @@
-import { AvatarRightEye } from '@/icons/AvatarIcon/AvatarRightEye';
+import { AvatarRightEye } from '@/icons/avatar-icon/AvatarRightEye';
 import useMightyMouse from 'react-hook-mighty-mouse';
 
 export function RightEye() {
   const {
     selectedElement: { position },
-  } = useMightyMouse(true, 'right-eye', { x: 45, y: 45 });
+  } = useMightyMouse(true, 'face-center');
 
   return (
     <div
@@ -14,7 +14,6 @@ export function RightEye() {
       }}
     >
       <AvatarRightEye
-        id='right-eye'
         style={{
           rotate: `${-Number(position.angle) + -150}deg`,
         }}
