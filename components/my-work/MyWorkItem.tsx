@@ -4,8 +4,6 @@ import { DocumentExportIcon } from '@/icons/DocumentExportIcon';
 import { useThemeStore } from '@/stores/theme.store';
 import { cn } from '@/utils/cn';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { Button } from '../common/button/Button';
 import { ExternalLink } from '../common/button/ExternalLink';
 import { Tag } from '../common/Tag';
 
@@ -29,14 +27,18 @@ export function MyWorkItem({
   reversed = false,
 }: MyWorkItemProps) {
   const { mainColor } = useThemeStore();
-  const router = useRouter();
+
+  const openExternalLink = () => {
+    window.open(externalUrl, '_blank');
+  };
 
   return (
-    <div
+    <button
       className={cn(
         'group relative flex min-h-90 w-full items-center',
         reversed ? 'justify-start' : 'justify-end',
       )}
+      onClick={openExternalLink}
     >
       <div
         className={cn(
@@ -64,7 +66,7 @@ export function MyWorkItem({
         </div>
         <p
           className={cn(
-            'max-w-150 rounded-4xl px-6 py-4 text-base! text-white',
+            'max-w-150 rounded-4xl px-6 py-4 text-base! text-white shadow-lg',
             reversed ? 'text-start' : 'text-end',
           )}
           style={{
@@ -80,24 +82,16 @@ export function MyWorkItem({
             <Tag
               key={`Tag-${projectUrl}-${tag}`}
               variant='solid'
-              className='text-sm text-neutral-100 lg:text-base'
+              className='text-sm text-neutral-100 shadow-lg lg:text-base'
             >
               {tag}
             </Tag>
           ))}
         </div>
         <div className={cn('flex items-center gap-4')}>
-          <Button
-            className='shrink-0 px-3 py-1 text-base font-medium whitespace-nowrap'
-            variant='secondary'
-            onClick={() => router.push(projectUrl)}
-          >
-            Check It Out
-          </Button>
-
           <ExternalLink href={externalUrl} icon={<DocumentExportIcon />} variant='icon' />
         </div>
       </div>
-    </div>
+    </button>
   );
 }
