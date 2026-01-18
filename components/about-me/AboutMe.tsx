@@ -9,7 +9,7 @@ import { EyeFollowAvatar } from './EyeFollowAvatar';
 export const AboutMe = () => {
   return (
     <Section
-      className='mt-25 lg:mt-0'
+      className='mt-23 lg:mt-0'
       wrapperProps={{
         className: 'flex w-full flex-col-reverse justify-between gap-20 lg:flex-row',
       }}
