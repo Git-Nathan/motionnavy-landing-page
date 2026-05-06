@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-const text = 'Hello!';
+const text = 'MotionNavy';
 
 const Welcome = () => {
   const [isDone, setIsDone] = useState(false);

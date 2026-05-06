@@ -1,6 +1,5 @@
 'use client';
 
-import { useThemeStore } from '@/stores/theme.store';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
 import { AnchorHTMLAttributes, ReactNode } from 'react';
@@ -21,10 +20,8 @@ export function AppLink({
   scrollOffset = 0,
   ...restProps
 }: IAppLinkProps) {
-  const { mainColor } = useThemeStore();
-
   const getClassesByVariant = () => {
-    return 'rounded-full text-white bg-purple px-4 py-2';
+    return 'rounded-full text-white bg-main px-4 py-2';
   };
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -45,11 +42,10 @@ export function AppLink({
     <Link href={href} {...restProps} onClick={handleClick}>
       <div
         className={cn(
-          'cursor-pointer rounded-full font-medium shadow-lg transition-all duration-200 ease-in-out hover:scale-105',
+          'bg-main cursor-pointer rounded-full font-medium shadow-lg transition-all duration-200 ease-in-out hover:scale-105',
           getClassesByVariant(),
           className,
         )}
-        style={{ backgroundColor: mainColor }}
       >
         {icon}
         {children}

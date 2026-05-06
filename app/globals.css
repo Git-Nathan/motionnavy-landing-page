@@ -3,20 +3,15 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
-  --color-main: #7655BE;
+  --color-main: #181D8C;
   --color-cyan: #169eb4;
   --color-pink: #ead6ee;
   --color-purple: #7655BE;
   --color-red: #ff6663;
-  --color-blue: #0085FE;
+  --color-blue: #181D8C;
   --test: #d8d8d8;
   --text-gray: #111827;
   --text-gray-reverse: #f9fafb;
-}
-
-[data-theme="dark"] {
-  --text-gray: #f9fafb;
-  --text-gray-reverse: #111827;
 }
 
 @theme inline {
@@ -35,13 +30,13 @@
   --color-text-gray-reverse: var(--text-gray-reverse);
 
   /* Fonts */
-  --font-dmsans: var(--font-dmsans), sans-serif;
+  --font-space-grotesk: var(--font-space-grotesk), sans-serif;
   --font-baloo: var(--font-balooBhaijaan2), cursive;
 }
 
 body {
   color: black;
-  font-family: var(--font-dmsans), sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
 
   @apply text-text-gray;
 }
