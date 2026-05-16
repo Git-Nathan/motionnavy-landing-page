@@ -1,6 +1,5 @@
 import { Background } from '@/layouts/Background';
 import { Header } from '@/layouts/Header';
-import { ThemeProvider } from '@/providers/ThemeProvider';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
@@ -23,14 +22,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body className={`relative bg-white antialiased dark:bg-black ${spaceGrotesk.variable}`}>
-        <ThemeProvider defaultTheme='system' enableSystem>
-          <Background />
-          <Header />
-          {children}
-          <div id='mobile-sidebar-portal' />
-        </ThemeProvider>
+    <html lang='en'>
+      <body className={`relative bg-white antialiased ${spaceGrotesk.variable}`}>
+        <Background />
+        <Header />
+        {children}
+        <div id='mobile-sidebar-portal' />
         <Analytics />
       </body>
     </html>

@@ -1,7 +1,5 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
 :root {
   --color-main: #181D8C;
   --color-cyan: #169eb4;

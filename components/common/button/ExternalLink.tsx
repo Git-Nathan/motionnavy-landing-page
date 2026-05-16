@@ -24,7 +24,7 @@ export const ExternalLink = ({
       target='_blank'
       rel='noopener noreferrer'
       className={cn(
-        'bg-main flex shrink-0 items-center gap-2 rounded-full px-5 py-2 text-sm font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 lg:text-lg dark:bg-gray-300 dark:text-black',
+        'bg-main flex shrink-0 items-center gap-2 rounded-full px-5 py-2 text-sm font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 lg:text-lg',
         className,
       )}
       {...restProps}

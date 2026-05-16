@@ -8,7 +8,7 @@ export function Header() {
   return (
     <div className='fixed top-0 z-100 w-full gap-4'>
       <header className='sticky top-0 z-40 mx-auto w-full max-w-7xl py-2 pr-2 pl-2'>
-        <div className='inset-0 flex h-18 items-center justify-between overflow-hidden rounded-full border border-white/30 bg-neutral-950/8 ps-4 pe-4.5 shadow-[inset_0_0_8px_1px_hsl(0,0%,100%,0.2)] backdrop-blur-lg dark:bg-gray-200/10'>
+        <div className='inset-0 flex h-18 items-center justify-between overflow-hidden rounded-full border border-white/30 bg-neutral-950/8 ps-4 pe-4.5 shadow-[inset_0_0_8px_1px_hsl(0,0%,100%,0.2)] backdrop-blur-lg'>
           <Logo />
           <nav className='absolute left-1/2 -translate-x-1/2'>
             <ul className='hidden items-center gap-5 font-medium text-neutral-900 lg:flex'>

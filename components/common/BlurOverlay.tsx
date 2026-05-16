@@ -5,7 +5,7 @@ export function BlurOverlay({ className, ...restProps }: HTMLAttributes<HTMLDivE
   return (
     <div
       className={cn(
-        'absolute inset-0 z-0 size-full bg-[#eeeeee]/50 backdrop-blur-3xl dark:bg-[#000000]/50',
+        'absolute inset-0 z-0 size-full bg-[#eeeeee]/50 backdrop-blur-3xl',
         className,
       )}
       {...restProps}
