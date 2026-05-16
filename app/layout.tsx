@@ -4,7 +4,6 @@ import { ThemeProvider } from '@/providers/ThemeProvider';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
-// @ts-expect-error: allow side-effect import of global CSS without type declarations
 import './globals.css';
 
 const spaceGrotesk = Space_Grotesk({
