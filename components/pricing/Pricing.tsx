@@ -19,8 +19,8 @@ const PRICING_TIERS = [
     direction: 'left',
   },
   {
-    key: 'cinematic',
-    name: 'Cinematic Package',
+    key: 'advanced',
+    name: 'Advanced Package',
     price: '50',
     price2: '65',
     features: [
