@@ -1,10 +1,11 @@
 import { Section } from '@/layouts/Section';
 import { ColorText } from '../common/ColorText';
+import { FadeIn } from '../motion-animation/FadeIn';
 
 const WORK_VIDEOS = [
-  { id: 'M0BsRedTPp8', title: 'YouTube Short 1' },
-  { id: 'YO5O-y4ihyo', title: 'YouTube Short 2' },
-  { id: 'UcPriL62Pkk', title: 'YouTube Short 3' },
+  { id: 'axQ3CtsaloA', title: 'YouTube Short 1', direction: 'up' },
+  { id: '6Tk-Cc5biEk', title: 'YouTube Short 2', direction: 'up' },
+  { id: 'efOXWdDlmsQ', title: 'YouTube Short 3', direction: 'up' },
 ];
 
 export function MyWorkV2() {
@@ -16,19 +17,24 @@ export function MyWorkV2() {
       }}
       id='my-work-v2'
     >
-      <ColorText elements='h2' className='text-4xl font-bold tracking-tighter' underlineHoverEffect>
-        My Work
-      </ColorText>
+      <FadeIn direction='up'>
+        <ColorText elements='h2' className='font-bold tracking-tighter' underlineHoverEffect>
+          My Work
+        </ColorText>
+      </FadeIn>
 
-      <p className='mt-4 max-w-120 text-center text-lg'>
-        Experience the motion. Explore our gallery of elite property reveals.
-      </p>
+      <FadeIn direction='up'>
+        <p className='mt-4 max-w-120 text-center text-lg'>
+          Experience the motion. Explore our gallery of elite property reveals.
+        </p>
+      </FadeIn>
 
-      <div className='mt-16 flex w-full flex-wrap items-center justify-evenly gap-6'>
+      <div className='mt-16 flex w-full flex-wrap items-center justify-evenly gap-4'>
         {WORK_VIDEOS.map((video) => (
-          <div
+          <FadeIn
             key={video.id}
-            className='flex w-80 max-w-90 flex-col items-center justify-center rounded-xl bg-neutral-50 p-4 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]'
+            direction={video.direction as 'left' | 'right'}
+            className='flex max-w-90 basis-82 flex-col items-center justify-center rounded-xl bg-[#181D8C]/30 p-4 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]'
           >
             <div
               className='relative w-full overflow-hidden rounded-2xl shadow-lg'
@@ -42,7 +48,7 @@ export function MyWorkV2() {
                 className='absolute top-0 left-0 h-full w-full'
               />
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </Section>

@@ -49,13 +49,13 @@ export function MobileSideBar() {
             </AppLink>
           </li>
           <li>
-            <AppLink href='#about-me' scrollOffset={100} onClick={handleToggleOpenSideBar}>
-              About Me
+            <AppLink href='#my-work-v2' scrollOffset={100} onClick={handleToggleOpenSideBar}>
+              My Work
             </AppLink>
           </li>
           <li>
-            <AppLink href='#my-work' scrollOffset={120} onClick={handleToggleOpenSideBar}>
-              My Work
+            <AppLink href='#pricing' scrollOffset={120} onClick={handleToggleOpenSideBar}>
+              Pricing
             </AppLink>
           </li>
           <li>

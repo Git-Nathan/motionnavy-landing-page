@@ -42,7 +42,7 @@ export function AppLink({
     <Link href={href} {...restProps} onClick={handleClick}>
       <div
         className={cn(
-          'bg-main cursor-pointer rounded-full font-medium shadow-lg transition-all duration-200 ease-in-out hover:scale-105',
+          'bg-main cursor-pointer rounded-full text-sm font-medium shadow-lg transition-all duration-200 ease-in-out hover:scale-105 lg:text-lg',
           getClassesByVariant(),
           className,
         )}

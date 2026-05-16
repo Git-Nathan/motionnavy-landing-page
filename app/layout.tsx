@@ -1,4 +1,3 @@
-import Welcome from '@/components/welcome/Welcome';
 import { Background } from '@/layouts/Background';
 import { Header } from '@/layouts/Header';
 import { ThemeProvider } from '@/providers/ThemeProvider';
@@ -15,11 +14,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Nathan Ngo',
+  title: 'MotionNavy - Transforming Raw Footage into High-Impact, Viral Property Tours.',
   description:
-    'Full-stack developer and creative problem solver. Explore my portfolio to see my latest projects, skills, and experience in web development.',
+    'At MotionNavy, we transform raw property footage into high-end, viral cinematic experiences. From high-octane speed ramping to professional-grade color grading.',
   icons: {
-    icon: '/icons/avatar-head.svg',
+    icon: '/icons/motionnavy-logo.svg',
   },
 };
 
@@ -30,7 +29,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider defaultTheme='system' enableSystem>
           <Background />
           <Header />
-          <Welcome />
           {children}
           <div id='mobile-sidebar-portal' />
         </ThemeProvider>

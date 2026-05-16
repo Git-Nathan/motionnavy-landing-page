@@ -9,43 +9,13 @@ export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'solid' | 'text' | 'secondary';
 };
 
-export function Button({
-  children,
-  className,
-  icon,
-  endIcon,
-  variant = 'solid',
-  style,
-  ...props
-}: IButtonProps) {
-  const baseClasses = {
-    solid: 'bg-main text-white shadow-lg',
-    secondary:
-      'bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 dark:bg-gray-300 dark:text-black',
-    text: '',
-  };
-
-  const getBaseStyle = () => {
-    if (variant === 'solid')
-      return {
-        backgroundColor: 'var(--main-color)',
-        boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
-      };
-
-    return {};
-  };
-
+export function Button({ children, className, icon, endIcon, ...props }: IButtonProps) {
   return (
     <button
       className={cn(
-        'relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-5 py-2 transition-all duration-200 ease-in-out hover:scale-105',
-        baseClasses[variant],
+        'bg-main cursor-pointer rounded-full font-medium text-white shadow-lg transition-all duration-200 ease-in-out hover:scale-105',
         className,
       )}
-      style={{
-        ...getBaseStyle(),
-        ...style,
-      }}
       {...props}
     >
       {icon}

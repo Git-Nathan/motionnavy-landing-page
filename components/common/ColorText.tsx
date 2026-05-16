@@ -18,11 +18,16 @@ export function ColorText(props: IColorTextProps) {
   if (underlineHoverEffect) {
     return (
       <div className='flex w-fit max-w-full flex-col hover:[&_.text-underline]:w-full'>
-        <Component className={cn('text-main', className)} {...restPropsWithoutClassName} />
+        <Component
+          className={cn('text-main text-2xl lg:text-4xl', className)}
+          {...restPropsWithoutClassName}
+        />
         <div className='text-underline bg-main mt-1 h-1 w-1/2 rounded-full transition-all duration-200' />
       </div>
     );
   }
 
-  return <Component className={cn('text-main', className)} {...restPropsWithoutClassName} />;
+  return (
+    <Component className={cn('text-main text-4xl', className)} {...restPropsWithoutClassName} />
+  );
 }

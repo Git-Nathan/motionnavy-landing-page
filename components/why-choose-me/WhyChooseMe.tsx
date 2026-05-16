@@ -4,6 +4,7 @@ import { FlashIcon } from '@/icons/FlashIcon';
 import { MessageIcon } from '@/icons/MessageIcon';
 import { Section } from '@/layouts/Section';
 import { ColorText } from '../common/ColorText';
+import { FadeIn } from '../motion-animation/FadeIn';
 
 const features = [
   {
@@ -12,6 +13,7 @@ const features = [
     description:
       'Every frame is meticulously timed to eliminate dead space, keeping potential buyers engaged with a seamless, high-end property experience.',
     icon: <BuildingIcon className='text-main h-8 w-8' />,
+    direction: 'right',
   },
   {
     id: 'fast-turnaround',
@@ -19,6 +21,7 @@ const features = [
     description:
       "Professional edits returned within 12–24 hours, because we know in real estate, every hour a listing isn't online is a missed opportunity.",
     icon: <FlashIcon className='text-main h-8 w-8' />,
+    direction: 'left',
   },
   {
     id: 'immersive-storytelling',
@@ -26,6 +29,7 @@ const features = [
     description:
       "We don't just show rooms; we sell a lifestyle through fluid motion, perfect lighting enhancement, and a truly cinematic atmosphere.",
     icon: <BarcodeIcon className='text-main h-8 w-8' />,
+    direction: 'right',
   },
   {
     id: 'virtual-staging-2',
@@ -33,6 +37,7 @@ const features = [
     description:
       'Hyper-realistic 3D furniture placement that respects spatial geometry and lighting, turning vacant rooms into luxury living spaces.',
     icon: <MessageIcon className='text-main h-8 w-8' />,
+    direction: 'left',
   },
 ];
 
@@ -45,14 +50,22 @@ export function WhyChooseMe() {
       }}
       id='why-choose-me'
     >
-      <ColorText elements='h2' className='text-4xl font-bold tracking-tighter' underlineHoverEffect>
-        Why Choose MotionNavy?
-      </ColorText>
+      <FadeIn direction='up'>
+        <ColorText
+          elements='h2'
+          className='text-center font-bold tracking-tighter'
+          underlineHoverEffect
+        >
+          Why Choose MotionNavy?
+        </ColorText>
+      </FadeIn>
 
-      <p className='mt-4 max-w-160 text-center text-lg'>
-        Because every square foot of your property has a story that deserves to be told with
-        cinematic precision.
-      </p>
+      <FadeIn direction='up'>
+        <p className='mt-4 max-w-160 text-center text-lg'>
+          Because every square foot of your property has a story that deserves to be told with
+          cinematic precision.
+        </p>
+      </FadeIn>
 
       {/* <Image
         src={'/images/final-cut-screen.png'}
@@ -64,16 +77,15 @@ export function WhyChooseMe() {
 
       <div className='mt-16 grid w-full grid-cols-1 gap-8 md:grid-cols-2'>
         {features.map((feature) => (
-          <div
-            key={feature.id}
-            className='flex flex-col gap-4 rounded-2xl bg-neutral-50 p-8 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]'
-          >
-            <div className='flex h-16 w-16 items-center justify-center rounded-xl bg-gray-200'>
-              {feature.icon}
+          <FadeIn key={feature.id} direction={feature.direction as 'left' | 'right'}>
+            <div className='flex flex-col gap-4 rounded-2xl bg-neutral-50 p-8 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]'>
+              <div className='flex h-16 w-16 items-center justify-center rounded-xl bg-gray-200'>
+                {feature.icon}
+              </div>
+              <h3 className='text-main text-2xl font-bold'>{feature.title}</h3>
+              <p className='text-base text-neutral-600'>{feature.description}</p>
             </div>
-            <h3 className='text-main text-2xl font-bold'>{feature.title}</h3>
-            <p className='text-base text-neutral-600'>{feature.description}</p>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </Section>
