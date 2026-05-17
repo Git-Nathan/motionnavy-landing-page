@@ -5,7 +5,7 @@ import { FadeIn } from '../motion-animation/FadeIn';
 const WORK_VIDEOS = [
   { id: 'axQ3CtsaloA', title: 'YouTube Short 1', direction: 'up' },
   { id: '6Tk-Cc5biEk', title: 'YouTube Short 2', direction: 'up' },
-  { id: 'efOXWdDlmsQ', title: 'YouTube Short 3', direction: 'up' },
+  { id: '3Qkwg35vcv0', title: 'YouTube Short 3', direction: 'up' },
 ];
 
 export function MyWorkV2() {
