@@ -40,12 +40,12 @@ export function Header() {
               Message Us
             </AppLink>
             <AppLink
-              href='https://www.instagram.com/motionnavy.studio/'
+              href='https://motionnavy.atlassian.net/jira/software/form/d312f776-a474-4832-8db2-7b9535805c19?atlOrigin=eyJpIjoiOWUxOTZkZjU3MGFiNGZiZTk0YWI2YTgzOWM4ZWIwOTEiLCJwIjoiaiJ9'
               target='_blank'
               rel='noreferrer'
-              className='hidden border-none bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-sm text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)] lg:block lg:text-base'
+              className='hidden border-none bg-black text-sm font-bold text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)] lg:block lg:text-base'
             >
-              Message Us on Instagram
+              Order Now
             </AppLink>
             <MobileSideBar />
           </div>
