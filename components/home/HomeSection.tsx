@@ -13,7 +13,7 @@ export const HomeSection = () => {
       id='home'
       wrapperProps={{
         className:
-          'relative mt-26 flex w-full flex-col items-center justify-between lg:mt-0 lg:h-screen lg:flex-row lg:pb-[6vh] gap-12',
+          'relative mt-20 flex w-full flex-col items-center justify-between lg:mt-0 lg:h-screen lg:flex-row lg:pb-[6vh] gap-12',
       }}
     >
       <div className='z-10 flex flex-1 flex-col items-start justify-center lg:pe-12'>

@@ -29,7 +29,7 @@ export function MyWorkV2() {
         </p>
       </FadeIn>
 
-      <div className='mt-16 flex w-full flex-wrap items-center justify-evenly gap-4'>
+      <div className='mt-10 flex w-full flex-wrap items-center justify-evenly gap-4 lg:mt-16'>
         {WORK_VIDEOS.map((video) => (
           <FadeIn
             key={video.id}

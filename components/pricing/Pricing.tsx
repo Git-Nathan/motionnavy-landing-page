@@ -74,7 +74,7 @@ export function Pricing() {
         </p>
       </FadeIn>
 
-      <div className='mt-16 flex w-full flex-wrap items-end justify-center gap-8'>
+      <div className='mt-10 flex w-full flex-wrap items-end justify-center gap-8 lg:mt-16'>
         {PRICING_TIERS.map((tier) => (
           <FadeIn
             key={tier.key}

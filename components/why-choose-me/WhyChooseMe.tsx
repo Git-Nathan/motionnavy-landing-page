@@ -75,7 +75,7 @@ export function WhyChooseMe() {
         className='mt-10 h-auto rounded-3xl px-1'
       /> */}
 
-      <div className='mt-16 grid w-full grid-cols-1 gap-8 md:grid-cols-2'>
+      <div className='mt-10 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:mt-16'>
         {features.map((feature) => (
           <FadeIn key={feature.id} direction={feature.direction as 'left' | 'right'}>
             <div className='flex flex-col gap-4 rounded-2xl bg-neutral-50 p-8 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]'>

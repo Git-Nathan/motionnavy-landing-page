@@ -2,6 +2,7 @@
 
 import { Section } from '@/layouts/Section';
 import { AppLink } from '../common/button/AppLink';
+import { OrderNow } from '../common/button/OrderNow';
 import { ColorText } from '../common/ColorText';
 import { FadeIn } from '../motion-animation/FadeIn';
 
@@ -28,14 +29,7 @@ export const Contact = () => {
           Message Us on Instagram
         </AppLink>
 
-        <AppLink
-          href='https://motionnavy.atlassian.net/jira/software/form/d312f776-a474-4832-8db2-7b9535805c19?atlOrigin=eyJpIjoiOWUxOTZkZjU3MGFiNGZiZTk0YWI2YTgzOWM4ZWIwOTEiLCJwIjoiaiJ9'
-          target='_blank'
-          rel='noreferrer'
-          className='hidden border-none bg-black text-sm font-bold text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)] lg:block lg:text-base'
-        >
-          Order Now
-        </AppLink>
+        <OrderNow className='block' />
       </FadeIn>
     </Section>
   );
