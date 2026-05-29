@@ -67,14 +67,6 @@ export function WhyChooseMe() {
         </p>
       </FadeIn>
 
-      {/* <Image
-        src={'/images/final-cut-screen.png'}
-        alt='Product Image'
-        width={1200}
-        height={806}
-        className='mt-10 h-auto rounded-3xl px-1'
-      /> */}
-
       <div className='mt-10 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:mt-16'>
         {features.map((feature) => (
           <FadeIn key={feature.id} direction={feature.direction as 'left' | 'right'}>
