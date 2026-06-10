@@ -11,12 +11,12 @@ export const Contact = () => {
     <Section className='h-screen' id='contact'>
       <FadeIn direction='up'>
         <ColorText elements='h2' className='font-bold tracking-tighter' underlineHoverEffect>
-          Get In Touch
+          Ready to Elevate Your Visuals?
         </ColorText>
       </FadeIn>
       <FadeIn as='p' className='mt-6 max-w-130 text-center text-lg'>
-        Get in touch to discover how our signature motion style can redefine your luxury property
-        marketing.
+        Skip the generic pricing tiers. Talk directly with our creative team to get a personalized
+        proposal tailored exactly to your brand&apos;s needs.
       </FadeIn>
 
       <FadeIn className='mt-6 flex flex-col items-center gap-4'>
@@ -28,6 +28,10 @@ export const Contact = () => {
         >
           Message Us on Instagram
         </AppLink>
+
+        <FadeIn as='p' className='mt-6 max-w-130 text-center text-lg'>
+          Worked with us before?
+        </FadeIn>
 
         <OrderNow className='block' />
       </FadeIn>
