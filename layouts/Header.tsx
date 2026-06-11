@@ -17,15 +17,20 @@ export function Header() {
                 <AppLink href='#home'>Home</AppLink>
               </li>
               <li>
+                <AppLink href='#why-choose-me' scrollOffset={120}>
+                  Why Choose Me
+                </AppLink>
+              </li>
+              <li>
                 <AppLink href='#my-work-v2' scrollOffset={100}>
                   My Work
                 </AppLink>
               </li>
-              <li>
+              {/* <li>
                 <AppLink href='#pricing' scrollOffset={130}>
                   Pricing
                 </AppLink>
-              </li>
+              </li> */}
               <li>
                 <AppLink href='#contact'>Contact</AppLink>
               </li>
