@@ -9,7 +9,6 @@ export default function Home() {
       <HomeSection />
       <WhyChooseMe />
       <MyWorkV2 />
-      {/* <Pricing /> */}
       <Contact />
     </>
   );

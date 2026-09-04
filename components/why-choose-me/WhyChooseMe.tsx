@@ -8,34 +8,34 @@ import { FadeIn } from '../motion-animation/FadeIn';
 
 const features = [
   {
-    id: 'cinematic-flow',
-    title: 'Designed for Cinematic Flow',
+    id: 'cinematic-storytelling',
+    title: 'Cinematic Storytelling',
     description:
-      'Every frame is meticulously timed to eliminate dead space, keeping potential buyers engaged with a seamless, high-end property experience.',
+      'Every edit is shaped around the story, mood and purpose of the project — not just a sequence of cuts.',
     icon: <BuildingIcon className='text-main h-8 w-8' />,
     direction: 'right',
   },
   {
-    id: 'fast-turnaround',
-    title: 'Fast Turnaround',
+    id: 'fast-reliable-turnaround',
+    title: 'Fast & Reliable Turnaround',
     description:
-      "Professional edits returned within 12–24 hours, because we know in real estate, every hour a listing isn't online is a missed opportunity.",
+      'A streamlined workflow helps projects move quickly while maintaining consistency and quality.',
     icon: <FlashIcon className='text-main h-8 w-8' />,
     direction: 'left',
   },
   {
-    id: 'immersive-storytelling',
-    title: 'Immersive Property Storytelling',
+    id: 'sound-motion-detail',
+    title: 'Sound, Motion & Detail',
     description:
-      "We don't just show rooms; we sell a lifestyle through fluid motion, perfect lighting enhancement, and a truly cinematic atmosphere.",
+      'Sound design, motion graphics, pacing and visual polish give each project its own character.',
     icon: <BarcodeIcon className='text-main h-8 w-8' />,
     direction: 'right',
   },
   {
-    id: 'virtual-staging-2',
-    title: 'Virtual Staging',
+    id: 'built-for-different-stories',
+    title: 'Built for Different Stories',
     description:
-      'Hyper-realistic 3D furniture placement that respects spatial geometry and lighting, turning vacant rooms into luxury living spaces.',
+      'Real estate, weddings, hospitality, events and commercial content — each edit is adapted to the audience, platform and brand.',
     icon: <MessageIcon className='text-main h-8 w-8' />,
     direction: 'left',
   },
@@ -56,21 +56,25 @@ export function WhyChooseMe() {
           className='text-center font-bold tracking-tighter'
           underlineHoverEffect
         >
-          Why Choose MotionNavy?
+          Why MotionNavy?
         </ColorText>
       </FadeIn>
 
       <FadeIn direction='up'>
         <p className='mt-4 max-w-160 text-center text-lg'>
-          Because every square foot of your property has a story that deserves to be told with
-          cinematic precision.
+          We combine storytelling, pacing, sound and visual detail to turn raw footage into polished
+          content built for the way your audience watches.
         </p>
       </FadeIn>
 
       <div className='mt-10 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:mt-16'>
         {features.map((feature) => (
-          <FadeIn key={feature.id} direction={feature.direction as 'left' | 'right'}>
-            <div className='flex flex-col gap-4 rounded-2xl bg-neutral-50 p-8 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]'>
+          <FadeIn
+            key={feature.id}
+            direction={feature.direction as 'left' | 'right'}
+            className='h-full'
+          >
+            <div className='flex h-full flex-col gap-4 rounded-2xl bg-neutral-50 p-8 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]'>
               <div className='flex h-16 w-16 items-center justify-center rounded-xl bg-gray-200'>
                 {feature.icon}
               </div>

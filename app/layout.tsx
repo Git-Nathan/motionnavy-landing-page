@@ -1,4 +1,5 @@
 import { Background } from '@/layouts/Background';
+import { Footer } from '@/layouts/Footer';
 import { Header } from '@/layouts/Header';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
@@ -15,9 +16,6 @@ export const metadata: Metadata = {
   title: 'MotionNavy - Transforming Raw Footage into High-Impact, Viral Property Tours.',
   description:
     'At MotionNavy, we transform raw property footage into high-end, viral cinematic experiences. From high-octane speed ramping to professional-grade color grading.',
-  icons: {
-    icon: '/icons/motionnavy-logo.svg',
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -27,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Background />
         <Header />
         {children}
+        <Footer />
         <div id='mobile-sidebar-portal' />
         <Analytics />
       </body>

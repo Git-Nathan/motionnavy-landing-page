@@ -6,34 +6,37 @@ import { OrderNow } from '../common/button/OrderNow';
 import { ColorText } from '../common/ColorText';
 import { FadeIn } from '../motion-animation/FadeIn';
 
+const INSTAGRAM_URL = 'https://www.instagram.com/motionnavy.studio/';
+
 export const Contact = () => {
   return (
-    <Section className='h-screen' id='contact'>
+    <Section className='relative h-screen' id='contact'>
       <FadeIn direction='up'>
-        <ColorText elements='h2' className='font-bold tracking-tighter' underlineHoverEffect>
-          Ready to Elevate Your Visuals?
+        <ColorText
+          elements='h2'
+          className='text-center font-bold tracking-tighter'
+          underlineHoverEffect
+        >
+          Your Footage. Our Edit. Let&apos;s Make It Stand Out.
         </ColorText>
       </FadeIn>
-      <FadeIn as='p' className='mt-6 max-w-130 text-center text-lg'>
-        Skip the generic pricing tiers. Talk directly with our creative team to get a personalized
-        proposal tailored exactly to your brand&apos;s needs.
+
+      <FadeIn as='p' className='mt-5 max-w-140 text-center text-lg'>
+        From real estate and events to commercial and branded content, tell us what you&apos;re
+        working on and we&apos;ll help shape the right edit for it.
       </FadeIn>
 
-      <FadeIn className='mt-6 flex flex-col items-center gap-4'>
+      <FadeIn className='mt-7 flex flex-col items-center gap-3'>
+        <OrderNow className='block' />
+
         <AppLink
-          href='https://www.instagram.com/motionnavy.studio/'
+          href={INSTAGRAM_URL}
           target='_blank'
           rel='noreferrer'
-          className='border-none bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-sm text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)] lg:text-lg'
+          className='bg-transparent px-2 py-1 text-sm font-medium text-neutral-700 shadow-none hover:text-neutral-900 lg:text-base'
         >
-          Message Us on Instagram
+          Prefer to chat first? Message us on Instagram →
         </AppLink>
-
-        <FadeIn as='p' className='mt-6 max-w-130 text-center text-lg'>
-          Worked with us before?
-        </FadeIn>
-
-        <OrderNow className='block' />
       </FadeIn>
     </Section>
   );

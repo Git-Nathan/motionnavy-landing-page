@@ -50,12 +50,12 @@ export function MobileSideBar() {
           </li>
           <li>
             <AppLink href='#why-choose-me' scrollOffset={100} onClick={handleToggleOpenSideBar}>
-              Why Choose Me
+              Why MotionNavy
             </AppLink>
           </li>
           <li>
             <AppLink href='#my-work-v2' scrollOffset={100} onClick={handleToggleOpenSideBar}>
-              My Work
+              Our Work
             </AppLink>
           </li>
           {/* <li>

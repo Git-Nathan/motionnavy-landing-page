@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: 'nathan-portfolio-lac.vercel.app',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        pathname: '/**',
+      },
     ],
   },
 };

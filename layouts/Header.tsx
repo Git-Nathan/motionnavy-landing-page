@@ -12,25 +12,20 @@ export function Header() {
         <div className='inset-0 flex h-14 items-center justify-between overflow-hidden rounded-full border border-white/30 bg-neutral-950/8 ps-3 pe-3 shadow-[inset_0_0_8px_1px_hsl(0,0%,100%,0.2)] backdrop-blur-lg lg:h-18 lg:ps-4 lg:pe-4.5'>
           <Logo />
           <nav className='absolute left-1/2 -translate-x-1/2'>
-            <ul className='hidden items-center gap-5 font-medium text-neutral-900 lg:flex'>
+            <ul className='hidden items-center gap-5 font-medium text-neutral-900 text-nowrap lg:flex'>
               <li>
                 <AppLink href='#home'>Home</AppLink>
               </li>
               <li>
                 <AppLink href='#why-choose-me' scrollOffset={120}>
-                  Why Choose Me
+                  Why MotionNavy
                 </AppLink>
               </li>
               <li>
                 <AppLink href='#my-work-v2' scrollOffset={100}>
-                  My Work
+                  Our Work
                 </AppLink>
               </li>
-              {/* <li>
-                <AppLink href='#pricing' scrollOffset={130}>
-                  Pricing
-                </AppLink>
-              </li> */}
               <li>
                 <AppLink href='#contact'>Contact</AppLink>
               </li>

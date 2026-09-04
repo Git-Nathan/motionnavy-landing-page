@@ -20,30 +20,24 @@ export const HomeSection = () => {
         <div className='max-w-xl'>
           <Tag className='px-3 font-bold'>MotionNavy</Tag>
           <ColorText elements='h1' className='mt-5 text-xl font-bold tracking-tighter md:text-4xl'>
-            Transforming Raw Footage into High-Impact,
-            <br />
-            Viral Property Tours.
+            We Turn Raw Footage
+            <br /> Into Videos People Want to Watch.
             <br />
           </ColorText>
           <div className='mt-4 min-h-10 text-xl leading-7 font-semibold lg:text-3xl'>
             <Typewriter
-              words={[
-                'Cinematic Property Reveals',
-                'Eliminate the Dead Space',
-                'Maximize Viewer Retention',
-                'Sell the Lifestyle',
-              ]}
+              words={['Real Estate', 'Commercial', 'Events', 'Wedding', 'Hospitality']}
               cursor
               loop
             />
           </div>
           <p className='mt-2 text-lg'>
-            At MotionNavy, we transform raw property footage into high-end, viral cinematic
-            experiences. From high-octane speed ramping to professional-grade color grading.
+            MotionNavy is a post-production studio creating polished, high-impact videos for real
+            estate, brands, events, hospitality and more.
           </p>
           <div className='mt-6 flex flex-col items-start gap-8 lg:flex-row lg:items-center'>
             <AppLink className='px-5' href='#my-work-v2' scrollOffset={100}>
-              View My Videos
+              View Our Work
             </AppLink>
           </div>
         </div>
