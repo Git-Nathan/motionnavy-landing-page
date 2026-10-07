@@ -10,7 +10,7 @@ export function Footer() {
     <Section className='relative' id='contact'>
       <FadeIn
         direction='up'
-        className='absolute bottom-12 mt-14 w-full border-t border-neutral-900/10 pt-8 lg:mt-20'
+        className='relative bottom-12 mt-14 w-full border-t border-neutral-900/10 pt-8 lg:absolute lg:mt-20'
       >
         <div className='flex flex-col items-center gap-6 text-center md:flex-row md:items-start md:justify-between md:text-left'>
           <div className='flex flex-col gap-1'>
